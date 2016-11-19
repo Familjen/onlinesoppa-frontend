@@ -1,0 +1,129 @@
+body{
+	background-color:#666;
+}
+
+#banner{
+	width:100%;
+	height:300px;
+	background-color:white;
+}
+
+#banner_image {
+	z-index:0;
+	display:block;
+	opacity: 0.7;
+	width:100%;
+	height:300px;
+	margin:0 auto;
+}
+
+#banner_logo {
+	z-index:1;
+	position:relative;
+	display:block;
+	margin:0 auto;
+	bottom:275px;
+}
+
+
+#bannerLine{
+	width:100%;
+	height:15px;
+	background-color: black;
+}
+
+#wrapper{
+	width:90%;
+	margin: 0 auto;
+	background-color:white;
+	margin-top:20px;
+}
+
+#menu{
+	width:100%;
+	height:80px;
+	background-color:#666;
+	font-family: 'BioRhyme', serif;
+}
+
+.logo{
+	display:block;
+	padding-top:20px;
+	margin:0 auto;
+}
+
+.tab{
+	text-align:center;
+	float:left;
+	height:70px;
+	width:10%;
+	line-height:70px;
+	background-color: #D45500;
+	margin-right: 10px;
+	position:relative;
+	top:10px;
+
+	font-size:1.2em;
+	color:white;
+	text-decoration: none;
+}
+
+.selectedTab{
+
+	background-color: #F60;
+	height:80px;
+	line-height: 80px;
+	position:relative;
+	top:0px;
+}
+
+.event{
+	width:50%;
+	margin:0 auto;
+	padding-bottom: 50px;
+	font-size: 20px;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+.event h2{
+	font-family: 'BioRhyme', serif;
+	margin-bottom:20px;
+	text-align:center;
+}
+
+.line {
+	width: 90%;
+	margin:0 auto;
+	border-top: 5px dotted #F60;
+	padding-top: 1000px;
+	clear: both;
+}
+
+.eventDesc {
+	width:70%;
+	float:left;
+}
+
+.eventButton {
+	float: left;
+	width:30%;
+	text-align:center;
+
+}
+
+.registerButton {
+	font-family: 'BioRhyme', serif;
+	text-decoration: none;
+	display: block;
+	background-color: red;
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	line-height: 150px;
+	border-radius: 75px;
+	color:white;
+}
+
+.filler{
+	clear:both;
+}
