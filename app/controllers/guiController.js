@@ -5,6 +5,7 @@ angular.module('mainModule')
 GuiController.$inject = ['$scope', '$http'];
 
 function GuiController($scope, $http) {
+	$scope.view = "";
   $scope.locationSelector = "Karlskrona";
 }
 
