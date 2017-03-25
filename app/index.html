@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="./css/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=BioRhyme|Noto+Sans" rel="stylesheet">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body ng-controller="GuiController">
@@ -21,7 +24,27 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-  <div ng-include="'/html/index.html'"></div>
+  <div id=banner_menu>
+      <select id="chooseTown" ng-model="locationSelector">
+        <option value="karlskrona">Karlskrona</option>
+        <option value="malmo">Malmö</option>
+        <option value="halmstad">Halmstad</option>
+      </select>
+      <div id="user">
+        Log in
+      </div>
+  </div>
+  <!--<div id="logIn">
+  </div>-->
+  <div id="banner">
+    <img src="./img/soup_image.png" alt="OnlineSoppa" id="banner_image">
+    <img src="./img/banner_logo.png" alt="OnlineSoppa" id="banner_logo">
+  </div>
+  <div id="bannerLine">
+  </div>
+  <div ng-if="locationSelector=='karlskrona'" ng-include="'/html/karlskrona-view.html'"></div>
+  <div ng-if="locationSelector=='malmo'" ng-include="'/html/malmo-view.html'"></div>
+  <div ng-if="locationSelector=='halmstad'" ng-include="'/html/halmstad-view.html'"></div>
   <script src="bower_components/angular/angular.js"></script>
   <script src="app.js"></script>
   <script src="controllers/guiController.js"></script>
