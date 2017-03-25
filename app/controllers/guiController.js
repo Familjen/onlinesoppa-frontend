@@ -7,6 +7,7 @@ GuiController.$inject = ['$scope', '$http'];
 function GuiController($scope, $http) {
 	$scope.view = "";
   $scope.locationSelector = "karlskrona";
+	$scope.showLogin = false;
 }
 
 /*.controller('GuiController', GuiController, ['$scope', function($scope) {
