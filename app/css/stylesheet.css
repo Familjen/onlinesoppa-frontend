@@ -10,6 +10,13 @@ body{
 	background: linear-gradient(#373e48 500px, #b7c4c8);
 }
 
+.background-line {
+	width: 5px;
+	border-radius: 2.5px;
+	background-color: black;
+	border-right: 1px solid white;
+}
+
 .center-flex-container {
 	display: flex;
 	justify-content: center;
@@ -23,6 +30,11 @@ body{
 .layer-1 {
 	position: absolute;
 	z-index: 1;
+}
+
+.layer-back-1 {
+	position: absolute;
+	z-index: -1;
 }
 
 .popup {
@@ -44,19 +56,16 @@ body{
 	border-bottom: 2px solid white;
 }
 
-#chooseTown{
-	background-color: #F60;
-	padding-left:5px;
-	padding-right:5px;
-	padding-top:2px;
-	padding-bottom:2px;
-	margin-top: 3px;
+#chooseTown {
+	background-color: black;
 	background: "";
+	margin-top: 7px;
 	-webkit-appearance:none;
   -moz-appearance:none;
   appearance:none;
-	color:black;
-	outline:none;
+	color: white;
+	outline: none;
+	border: none;
 }
 
 #user{
@@ -83,7 +92,7 @@ body{
 }
 
 #banner_image {
-	opacity: 0.9;
+	opacity: 0.8;
 	width: 100%;
 }
 
@@ -103,7 +112,7 @@ body{
 #events-wrapper {
 	background-color:white;
 	margin-top: 20px;
-	border-radius: 100px;
+	border-radius: 8em / 8em;
 }
 
 #menu{
@@ -135,13 +144,6 @@ body{
 .line {
 	height: 50px;
 	border-top: 5px dotted #F60;
-}
-
-.eventButton {
-	float: left;
-	width:30%;
-	text-align:center;
-
 }
 
 .registerButton {
