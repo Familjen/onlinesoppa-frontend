@@ -27,12 +27,12 @@
   -->
   <div class="container-fluid">
     <div ng-show="showLogin" ng-include="'/html/login-view.html'"></div>
-      <div id=banner_menu class="row">
-        <div class="col-xs-2 col-lg-8"></div>
-        <div id="user" class="col-xs-offset-5 col-xs-2 col-lg-offset-10 col-lg-1" ng-click="showLogin=true">
+      <div id=banner-menu class="row">
+        <div id="user" class="col-xs-offset-7 col-xs-2 col-sm-offset-7 col-sm-2
+          col-md-offset-9 col-md-1 col-lg-offset-9 col-lg-1 col-xl-offset-10 col-xl-1" ng-click="showLogin=true">
           Log in
         </div>
-        <div class="col-xs-1 col-lg-1 center-flex-container">
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 col-xl-1 center-flex-container">
           <select id="chooseTown" class="" ng-model="locationSelector">
             <option value="karlskrona">Karlskrona</option>
             <option value="malmo">Malmö</option>
@@ -53,13 +53,14 @@
         </div>
       </div>
     </div>
-    <div id="bannerLine" class="row col-xs-12 col-lg-12"></div>
+    <div id="banner-line" class="row"></div>
     <div ng-if="locationSelector=='karlskrona'" ng-include="'/html/karlskrona-view.html'"></div>
     <div ng-if="locationSelector=='malmo'" ng-include="'/html/malmo-view.html'"></div>
     <div ng-if="locationSelector=='halmstad'" ng-include="'/html/halmstad-view.html'"></div>
   </div>
   <script src="bower_components/angular/angular.js"></script>
   <script src="app.js"></script>
+  <script src="js/functions.js"></script>
   <script src="controllers/guiController.js"></script>
 </body>
 </html>

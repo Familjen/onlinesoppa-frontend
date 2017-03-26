@@ -6,12 +6,18 @@ Black: #000;
 */
 
 body{
-	background-color:#666;
+	background-color: #373e48;
+	background: linear-gradient(#373e48 500px, #b7c4c8);
 }
 
 .center-flex-container {
 	display: flex;
 	justify-content: center;
+}
+
+.end-flex-container {
+	display: flex;
+	justify-content: flex-end;
 }
 
 .layer-1 {
@@ -33,8 +39,9 @@ body{
 	border: 3px solid white;
 }
 
-#banner_menu{
+#banner-menu{
 	background-color:black;
+	border-bottom: 2px solid white;
 }
 
 #chooseTown{
@@ -76,7 +83,7 @@ body{
 }
 
 #banner_image {
-	opacity: 0.7;
+	opacity: 0.9;
 	width: 100%;
 }
 
@@ -87,17 +94,16 @@ body{
 	}
 }
 
-#bannerLine{
-	width:100%;
+#banner-line {
 	height:15px;
 	background-color: black;
+	border-top: 2px solid white;
 }
 
-#wrapper{
-	width:90%;
-	margin: 0 auto;
+#events-wrapper {
 	background-color:white;
-	margin-top:20px;
+	margin-top: 20px;
+	border-radius: 100px;
 }
 
 #menu{
@@ -113,56 +119,22 @@ body{
 	margin:0 auto;
 }
 
-.tab{
-	text-align:center;
-	float:left;
-	height:70px;
-	width:10%;
-	line-height:70px;
-	background-color: #D45500;
-	margin-right: 10px;
-	position:relative;
-	top:10px;
-
-	font-size:1.2em;
-	color:white;
-	text-decoration: none;
-}
-
-.selectedTab{
-
-	background-color: #F60;
-	height:80px;
-	line-height: 80px;
-	position:relative;
-	top:0px;
-}
-
-.event{
-	width:50%;
-	margin:0 auto;
-	padding-bottom: 50px;
+.event {
 	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	font-family: 'Noto Sans', sans-serif;
 }
 
 .event h2{
 	font-family: 'BioRhyme', serif;
 	margin-bottom:20px;
-	text-align:center;
+	text-align: center;
 }
 
 .line {
-	width: 90%;
-	margin:0 auto;
+	height: 50px;
 	border-top: 5px dotted #F60;
-	padding-top: 1000px;
-	clear: both;
-}
-
-.eventDesc {
-	width:70%;
-	float:left;
 }
 
 .eventButton {
@@ -181,10 +153,6 @@ body{
 	height: 150px;
 	text-align: center;
 	line-height: 150px;
-	border-radius: 75px;
+	border-radius: 50%;
 	color:white;
-}
-
-.filler{
-	clear:both;
 }

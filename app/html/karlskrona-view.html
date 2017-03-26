@@ -1,17 +1,25 @@
-<div id="wrapper">
-	<div class="event">
-		<h2>Soppa för FAN</h2>
-		<div class="eventDesc">Tid: 19.00.<br/>
-			Plats: Knaskrona, Minervas allrum. Äns.<br/>
-			Anmäl dig då.<br/>
-			Här. På den osynliga knappen.<br/>
-			Ses där :)
+<div class="row">
+	<div id="events-wrapper" class="col-xl-offset-2 col-xl-8">
+		<div class="row" ng-if="events.karlskrona.length <= 0">
+			<div class="event col-xl-offset-3 col-xl-6">
+				{{ Inga tillgängliga event }}
+			</div>
 		</div>
-		<div class="eventButton">
-			<a href="index.html" class="registerButton">Anmälan</a>
-		</div>
-		<div class="filler">
+		<div class="row" ng-repeat="event in events.karlskrona">
+			<div class="event col-xl-offset-3 col-xl-6">
+				<h2 class="row">{{ event.name }}</h2>
+				<div class="row">
+					<div class="col-xl-8">Datum: {{ getDateString(event) }}<br/>
+						Tid: {{ getTimeString(event) }}<br/>
+						Plats: {{ event.place }}<br/>
+						{{ event.description }}
+					</div>
+					<div class="eventButton col-xl-4 end-flex-container">
+						<a href="index.html" class="registerButton">Anmälan</a>
+					</div>
+				</div>
+			</div>
+			<div class="line col-xl-offset-1 col-xl-10"></div>
 		</div>
 	</div>
-	<div class="line"></div>
 </div>

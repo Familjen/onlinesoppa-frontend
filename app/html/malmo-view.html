@@ -1,11 +1,25 @@
-<div id="wrapper">
-	<div class="event">
-		<h2>Soppa i Malmöööööö</h2>
-		<div class="eventButton">
-			<a href="index.html" class="registerButton">Anmälan</a>
+<div class="row">
+	<div id="events-wrapper" class="col-xl-offset-2 col-xl-8">
+		<div class="row" ng-if="events.malmo.length <= 0">
+			<div class="event col-xl-offset-3 col-xl-6 center-flex-container">
+				Inga tillgängliga event
+			</div>
 		</div>
-		<div class="filler">
+		<div class="row" ng-repeat="event in events.malmo">
+			<div class="event col-xl-offset-3 col-xl-6">
+				<h2 class="row">{{ event.name }}</h2>
+				<div class="row">
+					<div class="col-xl-8">Datum: {{ getDateString(event) }}<br/>
+						Tid: {{ getTimeString(event) }}<br/>
+						Plats: {{ event.place }}<br/>
+						{{ event.description }}
+					</div>
+					<div class="eventButton col-xl-4 end-flex-container">
+						<a href="index.html" class="registerButton">Anmälan</a>
+					</div>
+				</div>
+			</div>
+			<div class="line col-xl-offset-1 col-xl-10"></div>
 		</div>
 	</div>
-	<div class="line"></div>
 </div>
