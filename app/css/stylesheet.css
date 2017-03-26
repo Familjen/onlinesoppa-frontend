@@ -43,24 +43,17 @@ body{
 	padding-right:5px;
 	padding-top:2px;
 	padding-bottom:2px;
-	border: 0px;
+	margin-top: 3px;
 	background: "";
 	-webkit-appearance:none;
   -moz-appearance:none;
   appearance:none;
-	margin-right:5px;
-	margin-left:5px;
-	margin-top:3px;
 	color:black;
 	outline:none;
-	float:right;
 }
 
 #user{
 	color:white;
-	float:right;
-	width:150px;
-	height:35px;
 	line-height:35px;
 	text-align:center;
 	cursor:pointer;
@@ -78,9 +71,20 @@ body{
 	background-color: white;
 }
 
+.img-container {
+	overflow: hidden;
+}
+
 #banner_image {
 	opacity: 0.7;
-	min-height: 100px;
+	width: 100%;
+}
+
+@media (max-width: 700px) {
+	#banner_image {
+		width: auto;
+		height: 200px;
+	}
 }
 
 #bannerLine{
