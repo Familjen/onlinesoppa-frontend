@@ -12,9 +12,9 @@
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
-  <link rel="stylesheet" href="./css/stylesheet.css">
   <link rel="stylesheet" type="text/css" href="./css/normalize.css">
   <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/stylesheet.css">
   <link href="https://fonts.googleapis.com/css?family=BioRhyme|Noto+Sans" rel="stylesheet">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -26,33 +26,69 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <div class="container-fluid">
-    <div ng-show="showLogin" ng-include="'/html/login-view.html'"></div>
-      <div id=banner_menu class="row">
-        <div class="col-xs-2 col-lg-8"></div>
-        <select id="chooseTown" class="" ng-model="locationSelector">
-          <option value="karlskrona">Karlskrona</option>
-          <option value="malmo">Malmö</option>
-          <option value="halmstad">Halmstad</option>
-        </select>
-        <div id="user" ng-click="showLogin=true">
-          Log in
+    <div id="page-background" class="row layer-back-2">
+      <div class="upper-border col-lg-12"></div>
+      <img src="./img/large-soup-image.png" class="responsive-img col-lg-12">
+      <div class="lower-border col-lg-12"></div>
+    </div>
+    <div class="row layer-back-1">
+      <div class="row col-lg-offset-4 col-lg-8">
+        <div class="center-flex-container col-lg-offset-1 col-lg-1">
+          <div class="string"></div>
+        </div>
+        <div class="center-flex-container col-lg-1">
+          <div class="string"></div>
+        </div>
+        <div class="center-flex-container col-lg-offset-6 col-lg-1">
+          <div class="string"></div>
+        </div>
+        <div class="center-flex-container col-lg-1">
+          <div class="string"></div>
         </div>
       </div>
-    <!--<div id="logIn">
-    </div>-->
-    <div id="banner">
-      <div class="row layer-1">
-        <div class="col-xs-3 col-lg-4"></div>
-        <img src="./img/banner_logo.png" alt="OnlineSoppa" id="banner-logo" class="responsive-img col-xs-6 col-lg-4">
-      </div>
-      <div class="row">
-        <img src="./img/soup_image.png" alt="OnlineSoppa" id="banner_image" class="responsive-img col-xs-12 col-lg-12">
+    </div>
+    <div ng-show="showLogin" ng-include="'/html/login-view.html'"></div>
+    <div id=top-menu class="row">
+      <div class="col-xs-2 col-lg-8"></div>
+      <select id="chooseTown" class="" ng-model="locationSelector">
+        <option value="karlskrona">Karlskrona</option>
+        <option value="malmo">Malmö</option>
+        <option value="halmstad">Halmstad</option>
+      </select>
+      <div id="user" ng-click="showLogin=true">
+        Log in
       </div>
     </div>
-    <div id="bannerLine" class="row col-xs-12 col-lg-12"></div>
-    <div ng-if="locationSelector=='karlskrona'" ng-include="'/html/karlskrona-view.html'"></div>
-    <div ng-if="locationSelector=='malmo'" ng-include="'/html/malmo-view.html'"></div>
-    <div ng-if="locationSelector=='halmstad'" ng-include="'/html/halmstad-view.html'"></div>
+    <!--<div id="logIn">
+    </div>-->
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="row">
+          <img src="./img/banner_logo.png" class="col-lg-offset-1 col-lg-11">
+        </div>
+        <div class="row">
+          <div class="col-lg-offset-1 col-lg-11 center-flex-container">
+            <div id="login-button" class="registerButton"
+              ng-click="showLogin=true">
+              Log in
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-offset-1 col-lg-11 center-flex-container">
+            <div id="register-button" class="registerButton"
+              ng-click="showLogin=true">
+              Register
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div ng-if="locationSelector=='karlskrona'" ng-include="'/html/karlskrona-view.html'"></div>
+        <div ng-if="locationSelector=='malmo'" ng-include="'/html/malmo-view.html'"></div>
+        <div ng-if="locationSelector=='halmstad'" ng-include="'/html/halmstad-view.html'"></div>
+      </div>
+    </div>
   </div>
   <script src="bower_components/angular/angular.js"></script>
   <script src="app.js"></script>
