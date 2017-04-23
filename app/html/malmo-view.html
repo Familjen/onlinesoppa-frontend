@@ -2,7 +2,9 @@
 	<div id="events-wrapper" class="col-xl-offset-2 col-xl-8">
 		<div class="row" ng-if="events.malmo.length <= 0">
 			<div class="event col-xl-offset-3 col-xl-6 center-flex-container">
-				Inga tillgängliga event
+				<div class="col-xl-offset-3 col-xl-6">
+					<h2 class="row">Inga tillgängliga event</h2>
+				</div>
 			</div>
 		</div>
 		<div class="row" ng-repeat="event in events.malmo">

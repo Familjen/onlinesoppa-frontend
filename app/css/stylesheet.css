@@ -5,27 +5,20 @@ Gray: #666;
 Black: #000;
 */
 
-body{
-	background-color: #373e48;
-	background: linear-gradient(#373e48 500px, #b7c4c8);
-}
-
 .upper-border {
 	position: relative;
 	height: 40px;
-	background-color: grey;
+	background-color: black;
 	border-bottom: 3px solid white;
 }
 
 .lower-border {
 	position: relative;
 	height: 40px;
+	bottom: 0px;
+	align-self: flex-end;
 	background-color: black;
 	border-top: 3px solid white;
-}
-
-.right-page {
-	height: 100vh;
 }
 
 .center-flex-container {
@@ -46,8 +39,16 @@ body{
 .layer-1 {
 	position: absolute;
 	z-index: 1;
+	top: 0;
+	height: 100%;
 }
 
+.layer-2 {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	height: 100%;
+}
 
 .layer-back-2 {
 	position: absolute;
@@ -65,10 +66,15 @@ body{
 }
 
 .string {
-	height: 50vh;
+	height: 80px;
 	width: 3px;
 	border-left: 1px solid white;
 	background-color: black;
+}
+
+#page-container {
+	position: absolute;
+	width: 100%;
 }
 
 #login {
@@ -105,13 +111,13 @@ body{
 	border-bottom: 2px solid white;
 }
 
-#chooseTown{
+#town-selector {
 	background-color: red;
-	padding-left:5px;
-	padding-right:5px;
-	padding-top:2px;
-	padding-bottom:2px;
+	height: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
 	border: 0px;
+	margin-top: 5px;
 }
 
 #user {
@@ -147,17 +153,20 @@ body{
 	border-top: 2px solid white;
 }
 
-#wrapper{
-	background-color:white;
-	border-radius: 3em;
-	margin: 0px 40px 0px 40px;
-	border: 2px solid grey;
+#events-wrapper {
+	background-color: white;
+	margin: 20px 20px 0 0;
+	padding: 0 10% 0 10%;
+	border-radius: 3em / 3em;
+	min-height: 200px;
 }
 
-#events-wrapper {
-	background-color:white;
-	margin-top: 20px;
-	border-radius: 8em / 8em;
+.left-page {
+	padding: 0 15px 0 15px;
+}
+
+.full-height {
+	height: 100%;
 }
 
 #menu{
@@ -167,22 +176,12 @@ body{
 	font-family: 'BioRhyme', serif;
 }
 
-.event{
-	width:50%;
-	margin:0 auto;
-	padding-bottom: 50px;
-}
-
 .logo{
-	display:block;
-	padding-top:20px;
-	margin:0 auto;
+	width: 100%;
 }
 
 .event {
-	font-size: 20px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	font-size: 15px;
 	font-family: 'Noto Sans', sans-serif;
 }
 
@@ -194,9 +193,8 @@ h2{
 
 .line {
 	height: 50px;
-	border-top: 5px dotted #F60;
-	padding-top: 10px;
-	clear: both;
+	border-top: 2px dotted #F60;
+	margin-top: 20px;
 }
 
 .eventDesc {
@@ -204,10 +202,8 @@ h2{
 	float:left;
 }
 
-.eventButton {
-	float: left;
-	width:30%;
-	text-align:center;
+.button-margin {
+	margin: 0px 0px 20px 0px;
 }
 
 .registerButton {
@@ -220,7 +216,6 @@ h2{
 	text-align: center;
 	line-height: 100px;
 	border-radius: 50%;
-	color:white;
-	margin: 10px;
+	color: white;
 	border: 2px solid white;
 }

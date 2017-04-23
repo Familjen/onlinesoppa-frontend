@@ -25,95 +25,36 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-  <div class="container-fluid">
-    <div id="page-background" class="row layer-back-2">
-      <div class="upper-border col-lg-12"></div>
+  <div id="page-container" class="container-fluid">
+    <div id="page-background" class="row">
       <img src="./img/large-soup-image.png" class="responsive-img col-lg-12">
       <div class="lower-border col-lg-12"></div>
     </div>
-    <div class="row layer-back-1">
-      <div class="row col-lg-offset-4 col-lg-8">
-        <div class="center-flex-container col-lg-offset-1 col-lg-1">
-          <div class="string"></div>
-        </div>
-        <div class="center-flex-container col-lg-1">
-          <div class="string"></div>
-        </div>
-        <div class="center-flex-container col-lg-offset-6 col-lg-1">
-          <div class="string"></div>
-        </div>
-        <div class="center-flex-container col-lg-1">
-          <div class="string"></div>
-    <!-- <div ng-show="showLogin" ng-include="'/html/login-view.html'"></div>
-      <div id=banner-menu class="row">
-        <div id="user" class="col-xs-offset-7 col-xs-2 col-sm-offset-7 col-sm-2
-          col-md-offset-9 col-md-1 col-lg-offset-9 col-lg-1 col-xl-offset-10 col-xl-1" ng-click="showLogin=true">
-          Log in -->
-        </div>
-        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 col-xl-1 center-flex-container">
-          <select id="chooseTown" class="" ng-model="locationSelector">
+    <div class="row layer-1">
+      <div ng-include="'./html/strings.html'"></div>
+    </div>
+    <div class="layer-2 row">
+      <div ng-show="showLogin" ng-include="'/html/login-view.html'"></div>
+      <div id=top-menu class="row upper-border col-lg-12">
+        <div class="col-lg-offset-10 col-lg-2 center-flex-container">
+          <select id="town-selector" ng-model="locationSelector">
             <option value="karlskrona">Karlskrona</option>
             <option value="malmo">Malmö</option>
             <option value="halmstad">Halmstad</option>
           </select>
         </div>
       </div>
-    </div>
-    <div ng-show="showLogin" ng-include="'/html/login-view.html'"></div>
-    <div id=top-menu class="row">
-      <div class="col-xs-2 col-lg-8"></div>
-      <select id="chooseTown" class="" ng-model="locationSelector">
-        <option value="karlskrona">Karlskrona</option>
-        <option value="malmo">Malmö</option>
-        <option value="halmstad">Halmstad</option>
-      </select>
-      <div id="user" ng-click="showLogin=true">
-        Log in
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="row">
-          <img src="./img/banner_logo.png" class="col-lg-offset-1 col-lg-11">
+      <div class="row full-height">
+        <div class="col-lg-4 left-part">
+          <div ng-include="'/html/left-page.html'"></div>
         </div>
-        <div class="row">
-          <div class="col-lg-offset-1 col-lg-11 center-flex-container">
-            <div id="login-button" class="registerButton"
-              ng-click="showLogin=true">
-              Log in
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-offset-1 col-lg-11 center-flex-container">
-            <div id="register-button" class="registerButton"
-              ng-click="showLogin=true">
-              Register
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-8">
-        <div ng-if="locationSelector=='karlskrona'" ng-include="'/html/karlskrona-view.html'"></div>
-        <div ng-if="locationSelector=='malmo'" ng-include="'/html/malmo-view.html'"></div>
-        <div ng-if="locationSelector=='halmstad'" ng-include="'/html/halmstad-view.html'"></div>
-      </div>
-    </div>
-    <!-- <div id="banner">
-      <div class="row layer-1">
-        <img src="./img/banner_logo.png" alt="OnlineSoppa" id="banner-logo" class="responsive-img col-xs-offset-2 col-xs-8
-          col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4">
-      </div>
-      <div class="row">
-        <div class="img-container col-xs-12 col-lg-12">
-          <img src="./img/soup_image.png" alt="OnlineSoppa" id="banner_image" class="responsive-img">
+        <div class="col-lg-8">
+          <div ng-if="locationSelector=='karlskrona'" ng-include="'/html/karlskrona-view.html'"></div>
+          <div ng-if="locationSelector=='malmo'" ng-include="'/html/malmo-view.html'"></div>
+          <div ng-if="locationSelector=='halmstad'" ng-include="'/html/halmstad-view.html'"></div>
         </div>
       </div>
     </div>
-    <div id="banner-line" class="row"></div>
-    <div ng-if="locationSelector=='karlskrona'" ng-include="'/html/karlskrona-view.html'"></div>
-    <div ng-if="locationSelector=='malmo'" ng-include="'/html/malmo-view.html'"></div>
-    <div ng-if="locationSelector=='halmstad'" ng-include="'/html/halmstad-view.html'"></div> -->
   </div>
   <script src="bower_components/angular/angular.js"></script>
   <script src="app.js"></script>

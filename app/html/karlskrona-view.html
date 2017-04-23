@@ -1,26 +1,27 @@
-<div class="row">
-	<div id="events-wrapper" class="col-xl-offset-2 col-xl-8">
-		<div class="row" ng-if="events.karlskrona.length <= 0">
-			<div class="event col-xl-offset-3 col-xl-6">
-				{{ Inga tillgängliga event }}
-			</div>
-		</div>
-		<div class="row" ng-repeat="event in events.karlskrona">
-			<div class="event col-xl-offset-3 col-xl-6">
-				<h2 class="row">{{ event.name }}</h2>
-				<div class="row">
-					<div class="col-xl-8">Datum: {{ getDateString(event) }}<br/>
-						Tid: {{ getTimeString(event) }}<br/>
-						Plats: {{ event.place }}<br/>
-						{{ event.description }}
-					</div>
-					<div class="col-xl-4 end-flex-container">
-						<a href="index.html" class="registerButton">Anmälan</a>
-					</div>
+<div class="right-page align-center-flex-container">
+	<div id="events-wrapper" class="col-lg-12">
+		<div class="event">
+			<div class="row" ng-if="events.karlskrona.length <= 0">
+				<div class="col-xl-offset-3 col-xl-6">
+					<h2 class="row">{{ Inga tillgängliga event }}</h2>
 				</div>
 			</div>
-			<div class="line col-xl-offset-1 col-xl-10"></div>
+			<div class="row" ng-repeat="event in events.karlskrona">
+				<div class="col-xl-offset-3 col-xl-6">
+					<h2 class="row">{{ event.name }}</h2>
+					<div class="row">
+						<div class="col-lg-8">Datum: {{ getDateString(event) }}<br/>
+							Tid: {{ getTimeString(event) }}<br/>
+							Plats: {{ event.place }}<br/>
+							{{ event.description }}
+						</div>
+						<div class="col-lg-4 end-flex-container">
+							<a href="index.html" class="registerButton">Anmälan</a>
+						</div>
+					</div>
+				</div>
+				<div class="line col-lg-offset-1 col-lg-10"></div>
+			</div>
 		</div>
-		<div class="line"></div>
 	</div>
 </div>
